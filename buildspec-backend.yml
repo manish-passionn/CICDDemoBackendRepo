@@ -7,14 +7,14 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin <account_id>.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 169878316465.dkr.ecr.Global.amazonaws.com
       - mvn clean package -f pom.xml
   build:
     commands:
       - echo Building Docker image for backend...
       - docker build -t backend-image .
-      - docker tag backend-image:latest <account_id>.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/backend:latest
+      - docker tag backend-image:latest 169878316465.dkr.ecr.Global.amazonaws.com/backend:latest
   post_build:
     commands:
       - echo Pushing Docker image to ECR...
-      - docker push <account_id>.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/backend:latest
+      - docker push 169878316465.dkr.ecr.Global.amazonaws.com/backend:latest
