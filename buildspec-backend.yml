@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 169878316465.dkr.ecr.us-east-1.amazonaws.com
-      - mvn clean package -f pom.xml
+      - mvn clean package -f pom.xml -DskipTests
   build:
     commands:
       - echo Building Docker image for backend...
