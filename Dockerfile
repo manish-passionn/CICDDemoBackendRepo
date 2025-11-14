@@ -1,7 +1,7 @@
 # Use a lightweight Java 17 runtime
 #FROM public.ecr.aws/bitnami/eclipse-temurin:17-jdk
-FROM public.ecr.aws/jht/eclipse-temurin:17-jdk
-
+#FROM public.ecr.aws/jht/eclipse-temurin:17-jdk
+FROM 169878316465.dkr.ecr.us-east-1.amazonaws.com/eclipse-temurin:17-jdk
 #FROM bitnami/eclipse-temurin:17
 
 # Set working directory
