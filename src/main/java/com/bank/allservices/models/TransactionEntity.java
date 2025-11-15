@@ -56,9 +56,6 @@ public class TransactionEntity {
     @Column(name = "payment_gateway_name")
     private String paymentGatewayName;
 
-//    @Column(name = "transaction_fees", precision = 15, scale = 2)
-//    private Double transactionFees = 0.0;
-
     @Column(name = "bank_account_number")
     private String bankAccountNumber;
 
@@ -84,7 +81,6 @@ public class TransactionEntity {
 	            this.userEmail = transaction.userEmail;
 	            this.userPhone = transaction.userPhone;
 	            this.paymentGatewayName = transaction.paymentGatewayName;
-//	            this.transactionFees = transaction.transactionFees;
 	            this.bankAccountNumber = transaction.bankAccountNumber;
 	            this.bankName = transaction.bankName;
 	        }
@@ -122,8 +118,6 @@ public class TransactionEntity {
         this.currency = currency;
     }
 
-  
-
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
@@ -132,9 +126,7 @@ public class TransactionEntity {
         this.timestamp = timestamp;
     }
 
-   
-
-    public String getStatus() {
+   public String getStatus() {
         return status;
     }
 
@@ -190,14 +182,6 @@ public class TransactionEntity {
         this.paymentGatewayName = paymentGatewayName;
     }
 
-//    public Double getTransactionFees() {
-//        return transactionFees;
-//    }
-
-//    public void setTransactionFees(Double transactionFees) {
-//        this.transactionFees = transactionFees;
-//    }
-
     public String getBankAccountNumber() {
         return bankAccountNumber;
     }
@@ -214,8 +198,7 @@ public class TransactionEntity {
         this.bankName = bankName;
     }
     
-    
-	public String getTransactionType() {
+    public String getTransactionType() {
 		return transactionType;
 	}
 
@@ -239,6 +222,5 @@ public class TransactionEntity {
 				+ invoiceNumber + ", userId=" + userId + ", userEmail=" + userEmail
 				+ ", userPhone=" + userPhone + ", paymentGatewayName=" + paymentGatewayName + ",  bankAccountNumber=" 
 			    + bankAccountNumber + ", bankName=" + bankName + "]";
-		
 	}
 }
