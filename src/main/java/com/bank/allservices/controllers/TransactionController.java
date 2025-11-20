@@ -26,6 +26,7 @@ import com.bank.allservices.services.JWTService;
 import com.bank.allservices.services.TransactionService;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class TransactionController {
 
 	@Autowired
