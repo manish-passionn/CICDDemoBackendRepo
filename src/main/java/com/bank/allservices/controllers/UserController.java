@@ -32,7 +32,7 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 //@RequestMapping("/users")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class UserController {
 
 	@Autowired
