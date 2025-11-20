@@ -1,8 +1,8 @@
 package com.bank.allservices.config;
-import javax.servlet.*;
-import javax.servlet.http.*;
 import java.io.IOException;
-
+// New (Spring Boot 3.x)
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
 @Component
 public class DynamicCorsFilter implements Filter {
     @Override
@@ -28,3 +28,4 @@ public class DynamicCorsFilter implements Filter {
     }
 
 }
+
