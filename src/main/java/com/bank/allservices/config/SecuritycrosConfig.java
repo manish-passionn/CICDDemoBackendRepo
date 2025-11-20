@@ -1,34 +1,37 @@
+package com.bank.allservices.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-
+ 
 import java.util.List;
-
+ 
 @Configuration
-public class SecurityConfig {
-
+public class SecuritycrosConfig {
+ 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable()
-            .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf(csrf -> csrf.disable())
+            .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+            .cors(cors -> cors.configurationSource(corsConfigurationSource())); // ✅ Use bean here
         return http.build();
     }
-
+ 
     @Bean
-    public CorsFilter corsFilter() {
+    public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://http://44.195.46.236")); // Frontend URL
+        configuration.setAllowedOrigins(List.of("http://44.195.46.236")); // Frontend URL
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
-
+        configuration.setAllowCredentials(true); // ✅ If you need cookies/JWT
+ 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
-
-        return new CorsFilter(source);
+        return source;
     }
-
+ 
 }
+ 
