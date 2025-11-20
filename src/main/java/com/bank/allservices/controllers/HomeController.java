@@ -13,7 +13,7 @@ import java.security.Principal;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://54.81.163.242")
 @RequestMapping("/home")
 public class HomeController {
     @Autowired
