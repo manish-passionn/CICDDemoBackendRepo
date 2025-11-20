@@ -1,3 +1,4 @@
+package com.bank.allservices.config;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
@@ -25,4 +26,5 @@ public class DynamicCorsFilter implements Filter {
             chain.doFilter(req, res);
         }
     }
+
 }
