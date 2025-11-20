@@ -30,7 +30,7 @@ import io.jsonwebtoken.Claims;
 
 
 @RestController
-@CrossOrigin(origins = "http://54.81.163.242")
+@CrossOrigin(origins = "http://44.195.46.236")
 public class AccountController {
 
 	@Autowired
