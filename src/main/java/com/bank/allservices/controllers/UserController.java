@@ -32,7 +32,6 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 //@RequestMapping("/users")
-@CrossOrigin(origins = "http://http://44.195.46.236")
 public class UserController {
 
 	@Autowired
