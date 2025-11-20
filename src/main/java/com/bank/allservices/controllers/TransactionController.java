@@ -27,7 +27,7 @@ import com.bank.allservices.services.JWTService;
 import com.bank.allservices.services.TransactionService;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://54.81.163.242")
 public class TransactionController {
 
 	@Autowired
