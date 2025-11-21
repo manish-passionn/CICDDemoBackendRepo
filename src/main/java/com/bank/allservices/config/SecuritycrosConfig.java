@@ -13,7 +13,7 @@ import java.util.List;
 public class SecuritycrosConfig {
  
        @Bean("securityFilterChainCors")
-       public SecurityFilterChain corsSecurityFilterChain(HttpSecurity http) throws Exception
+       public SecurityFilterChain corsSecurityFilterChain(HttpSecurity http) throws Exception {
  
         http.csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
@@ -36,4 +36,5 @@ public class SecuritycrosConfig {
  
 }
  
+
 
