@@ -23,7 +23,7 @@ public class SecuritycrosConfig {
     @Bean("corscicdConfigurationSource")
     public CorsConfigurationSource corscicdConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("frontend-cicdservice.cicddemoapp.local")); // Frontend URL
+        configuration.setAllowedOrigins(List.of("http://54.90.250.41")); // Frontend URL
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true); // ✅ If you need cookies/JWT
@@ -34,3 +34,4 @@ public class SecuritycrosConfig {
     }
 
 }
+
