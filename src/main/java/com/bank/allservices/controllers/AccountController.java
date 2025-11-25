@@ -30,6 +30,7 @@ import io.jsonwebtoken.Claims;
 
 
 @RestController
+@RequestMapping("/api")
 public class AccountController {
 
 	@Autowired
