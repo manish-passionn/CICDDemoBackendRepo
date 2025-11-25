@@ -27,6 +27,7 @@ import com.bank.allservices.services.JWTService;
 import com.bank.allservices.services.TransactionService;
 
 @RestController
+@RequestMapping("/api")
 public class TransactionController {
 
 	@Autowired
