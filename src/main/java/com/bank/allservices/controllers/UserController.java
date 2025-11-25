@@ -31,7 +31,7 @@ import com.bank.allservices.services.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
-//@RequestMapping("/users")
+@RequestMapping("/api")
 public class UserController {
 
 	@Autowired
