@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bank.allservices.models.AccountEntity;
 import com.bank.allservices.services.AccountService;
 import com.bank.allservices.services.JWTService;
-
+import org.springframework.web.bind.annotation.RequestMapping;
 import io.jsonwebtoken.Claims;
 
 
